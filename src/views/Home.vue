@@ -1,29 +1,24 @@
 <template>
     <div>
-        <div>{{ AA }}</div>
-        <div>{{ BB }}</div>
-        <div>{{ CC }}</div>
-        <div>{{ DD }}</div>
-        <div>{{ EE }}</div>
+        <home-header/>
+        <main-sections/>
+        <home-footer/>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
+import HomeHeader from '../components/HomeHeader.vue';
+import MainSections from '../components/MainSections.vue';
+import HomeFooter from '../components/HomeFooter.vue';
+
 
 @Component({
-    components: {}
+    components: {
+        HomeHeader,
+        MainSections,
+        HomeFooter,
+    }
 })
-export default class Home extends Vue {
-    private AA: string = 'aaaa';
-    private BB: string = 'bbbb'
-    private CC: string = 'cccc'
-    private DD: string = 'dddd'
-    private EE: string = 'eeee'
-}
-
+export default class Home extends Vue {}
 </script>
-
-<style lang="css" scoped>
-
-</style>
