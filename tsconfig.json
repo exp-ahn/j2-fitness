@@ -6,7 +6,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": false,
+    "strict": true,
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "jsx": "preserve",

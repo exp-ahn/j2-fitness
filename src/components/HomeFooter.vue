@@ -4,13 +4,13 @@
             <div class="footer-underline-box">
                 <div class="footer-left">
                     <div class="footer-logo">
-                        <!-- <img src="./imgs/logo1.png" alt="J2 FITNESS" />
-                        <img src="./imgs/logo2.png" alt="J2 FITNESS" /> -->
+                        <img src="/imgs/j2-logos/j2_main_logo_1.png" alt="J2 FITNESS" />
+                        <img src="/imgs/j2-logos/j2_main_logo_2.png" alt="J2 FITNESS" />
                     </div>
                     <div class="contents-small-circles">
                         <div
                             class="small-circle"
-                            @click="openNewTab('https://www.instagram.com/j2_fitness_official/')"
+                            @click="openNewTab('https://www.instagram.com/j2fitness_gaegeum/')"
                         >
                             <i class="fa-brands fa-instagram"></i>
                         </div>
@@ -22,7 +22,7 @@
                         </div>
                         <div
                             class="small-circle"
-                            @click="openNewTab('https://blog.naver.com/hyun6290')"
+                            @click="openNewTab('https://blog.naver.com/dmfmtm')"
                         >
                             <!-- <img class="footer-naver-blog" src="./imgs/blog.png" /> -->
                         </div>
@@ -73,8 +73,9 @@
 </template>
 
 <script lang="ts">
-import { Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
+@Component({})
 export default class HomeFooter extends Vue {
     public openNewTab(address: string) {
         window.open(address);
@@ -105,7 +106,7 @@ export default class HomeFooter extends Vue {
 
 footer {
     background-color: #000;
-    height: 290px;
+    /* height: 290px; */
 }
 
 .footer-naver-blog {
