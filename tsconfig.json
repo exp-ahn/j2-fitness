@@ -1,8 +1,13 @@
-{
+{  
+  "vueCompilerOptions": {
+    "target": 2,
+    "experimentalUseElementAccessInTemplate": true
+  },
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false,
+    "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "jsx": "preserve",
     "moduleResolution": "node",
