@@ -9,6 +9,7 @@
             tabindex="0"
         >
             <div style="height: 100vh;">
+                <naver-map/>
                 <!-- <MainImgs /> -->
             </div>
             <div id="scrollspyHeading1" class="main_section">
@@ -32,8 +33,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import NaverMap from './common/map/NaverMap.vue';
 
-@Component({})
+@Component({
+    components: {
+        NaverMap
+    }
+})
 export default class MainSections extends Vue {
 }
 </script>
