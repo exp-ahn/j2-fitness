@@ -9,13 +9,13 @@
             tabindex="0"
         >
             <div style="height: 100vh;">
-                <naver-map/>
-                <!-- <MainImgs /> -->
+                <carousel-imgs/>
             </div>
             <div id="scrollspyHeading1" class="main_section">
-                <!-- <Inquiry openNewTab={openNewTab} /> -->
+                <registration-inquiry/>
             </div>
             <div id="scrollspyHeading2" class="main_section">
+                <naver-map/>
                 <!-- <Directions openNewTab={openNewTab} /> -->
             </div>
             <div id="scrollspyHeading3" class="main_section">
@@ -33,10 +33,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import CarouselImgs from './mainSection/CarouselImgs.vue';
 import NaverMap from './common/map/NaverMap.vue';
+import RegistrationInquiry from './mainSection/RegistrationInquiry.vue';
 
 @Component({
     components: {
+        CarouselImgs,
+        RegistrationInquiry,
         NaverMap
     }
 })
