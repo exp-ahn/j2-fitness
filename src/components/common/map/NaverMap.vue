@@ -14,8 +14,17 @@ declare global {
 @Component
 export default class NaverMap extends Vue {
   private map: any = null;
+  private marker:any = null;
 
-  // 네이버 지도 API 스크립트 로드 함수
+  private async mounted() {
+    try {
+      await this.loadNaverMapScript();
+      this.initializeMap();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   private loadNaverMapScript(): Promise<void> {
     return new Promise((resolve, reject) => {
       const existingScript = document.getElementById('naver-map-script');
@@ -41,30 +50,32 @@ export default class NaverMap extends Vue {
     });
   }
 
-  // 네이버 지도 생성 함수
   private initializeMap(): void {
     const mapOptions = {
       center: new window.naver.maps.LatLng(35.1534898, 129.0235399), // 초기 중심 좌표
-      zoom: 17, // 초기 줌 레벨
+      zoom: 16, // 초기 줌 레벨
     };
     this.map = new window.naver.maps.Map('map', mapOptions);
+    this.initializeMapMaker();
   }
 
-  // Vue 라이프사이클 훅: 컴포넌트가 마운트되면 지도 로드
-  private async mounted() {
-    try {
-      await this.loadNaverMapScript();
-      this.initializeMap();
-    } catch (error) {
-      console.error(error);
-    }
+  private initializeMapMaker(): void {
+    this.marker = new window.naver.maps.Marker({
+      position: new window.naver.maps.LatLng(35.1534898, 129.0235399),
+      map: this.map
+      // 마커 이미지 커스텀을 위한 property
+     // url: HOME_PATH +'/img/example/sally.png',
+      //   size: new naver.maps.Size(50, 52),
+      //   origin: new naver.maps.Point(0, 0),
+      //   anchor: new naver.maps.Point(25, 26)
+    });
   }
 }
 </script>
 
 <style scoped>
 .map-container {
-  width: 100%;
+  width: 400px;
   height: 400px;
 }
 </style>
