@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section style="padding-top: 100px;">
         <div
             data-bs-spy="scroll"
             data-bs-target="#navbar-example2"
@@ -7,17 +7,10 @@
             data-bs-smooth-scroll="true"
             class="scrollspy-example rounded-2"
             tabindex="0"
-        >
-            <div style="height: 100vh;">
-                <carousel-imgs/>
-            </div>
-            <div id="scrollspyHeading1" class="main_section">
-                <registration-inquiry/>
-            </div>
-            <div id="scrollspyHeading2" class="main_section">
-                <naver-map/>
-                <!-- <Directions openNewTab={openNewTab} /> -->
-            </div>
+        >        
+            <carousel-imgs style="height: 100vh;"/>
+            <registration-inquiry id="scrollspyHeading1" class="main_section"/>
+            <location id="scrollspyHeading2" class="main_section"/>
             <div id="scrollspyHeading3" class="main_section">
                 <!-- <Trainers /> -->
             </div>
@@ -25,7 +18,7 @@
                 <!-- <Interior /> -->
             </div>
             <div id="scrollspyHeading5" class="main_section">
-                <!-- <Blog openNewTab={openNewTab} /> -->
+                <!-- <Blog/> -->
             </div>
         </div>
     </section>
@@ -34,14 +27,14 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import CarouselImgs from './mainSection/CarouselImgs.vue';
-import NaverMap from './common/map/NaverMap.vue';
 import RegistrationInquiry from './mainSection/RegistrationInquiry.vue';
+import Location from './mainSection/Location.vue';
 
 @Component({
     components: {
         CarouselImgs,
         RegistrationInquiry,
-        NaverMap
+        Location,
     }
 })
 export default class MainSections extends Vue {
@@ -50,7 +43,7 @@ export default class MainSections extends Vue {
 
 <style lang="css" scoped>
 .main_section {
-    padding-top: 110px;
+    padding-top: 50px;
     height: 100vh;
 }
 </style>
