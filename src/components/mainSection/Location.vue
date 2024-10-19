@@ -5,7 +5,7 @@
             개금역 2번 출구에서 도보로 단<strong>"3분"</strong>거리
         </p>
         <div class="d-flex flex-wrap justify-content-center">
-            <naver-map/>
+            <naver-map :mapWidth="550" :mapHeight="450"/>
             <div>
                 <div class="d-flex justify-content-center">
                     <div

@@ -1,11 +1,11 @@
 <template>
-  <div class="map-container">
-    <div id="map" style="width: 400px; height: 400px;"></div>
+  <div>
+    <div id="map" :style="{ width: mapWidth + 'px', height: mapHeight + 'px' }"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 declare global {
   interface Window { naver: any; }
@@ -13,6 +13,10 @@ declare global {
 
 @Component
 export default class NaverMap extends Vue {
+  // 현재 map area 지정을 위해 받는 숫자값은 px단위로 지정됩니다.
+  @Prop({default: 550}) mapWidth!:number
+  @Prop({default: 450}) mapHeight!:number
+
   private map: any = null;
   private marker:any = null;
 
@@ -72,10 +76,3 @@ export default class NaverMap extends Vue {
   }
 }
 </script>
-
-<style scoped>
-.map-container {
-  width: 400px;
-  height: 400px;
-}
-</style>
