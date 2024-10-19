@@ -11,9 +11,7 @@
             <carousel-imgs style="height: 100vh;"/>
             <registration-inquiry id="scrollspyHeading1" class="main_section"/>
             <location id="scrollspyHeading2" class="main_section"/>
-            <div id="scrollspyHeading3" class="main_section">
-                <!-- <Trainers /> -->
-            </div>
+            <trainers id="scrollspyHeading3" class="main_section"/>
             <div id="scrollspyHeading4" class="main_section">
                 <!-- <Interior /> -->
             </div>
@@ -29,12 +27,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import CarouselImgs from './mainSection/CarouselImgs.vue';
 import RegistrationInquiry from './mainSection/RegistrationInquiry.vue';
 import Location from './mainSection/Location.vue';
+import Trainers from './mainSection/Trainers.vue';
 
 @Component({
     components: {
         CarouselImgs,
         RegistrationInquiry,
         Location,
+        Trainers
     }
 })
 export default class MainSections extends Vue {
