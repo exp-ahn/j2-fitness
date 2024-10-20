@@ -9,13 +9,13 @@
             tabindex="0"
         >        
             <carousel-imgs style="height: 100vh;"/>
-            <registration-inquiry id="scrollspyHeading1" class="main_section"/>
-            <location id="scrollspyHeading2" class="main_section"/>
-            <trainers id="scrollspyHeading3" class="main_section"/>
-            <div id="scrollspyHeading4" class="main_section">
+            <registration-inquiry id="inquiry" class="main_section"/>
+            <location id="location" class="main_section"/>
+            <trainers id="trainers" class="main_section"/>
+            <div id="interior" class="main_section">
                 <!-- <Interior /> -->
             </div>
-            <div id="scrollspyHeading5" class="main_section">
+            <div id="blog" class="main_section">
                 <!-- <Blog/> -->
             </div>
         </div>

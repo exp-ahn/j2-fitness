@@ -8,12 +8,6 @@
             <naver-map :mapWidth="550" :mapHeight="450"/>
             <div>
                 <div class="d-flex justify-content-center">
-                    <div
-                        class="map-button kakao-map-button"
-                        @click="openNewTab('https://place.map.kakao.com/889644700')"
-                    >
-                        <img src="/imgs/map-icons/kakao/kakaomap_horizontal_ko.png" alt="카카오 맵"/>
-                    </div>
                     <!-- 네이버 지도 링크가 폐업처리된 곳으로 나옴 이후 수정처리 필요함!! -->
                     <div
                         class="map-button naver-map-button"
@@ -21,6 +15,12 @@
                     >
                         <img src="/imgs/map-icons/naver/Map_Service_Icon.png" alt="네이버 지도" />
                         <img src="/imgs/map-icons/naver/___Logotype________WH.png" alt="네이버 지도" />
+                    </div>
+                    <div
+                        class="map-button kakao-map-button"
+                        @click="openNewTab('https://place.map.kakao.com/889644700')"
+                    >
+                        <img src="/imgs/map-icons/kakao/kakaomap_horizontal_ko.png" alt="카카오 맵"/>
                     </div>
                 </div>
                 <div class="detail-info">
