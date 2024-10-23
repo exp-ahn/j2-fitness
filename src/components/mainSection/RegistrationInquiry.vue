@@ -4,16 +4,10 @@
         <div class="d-flex justify-content-center">
             <div class="contact-way-card d-flex flex-column align-items-center">
                 <div class="underline-box zoom-in">
-                    <figure class="d-flex flex-column align-items-center">
-                        <img
-                            src="/imgs/contact/kakao.png"
-                            @click="openNewTab('https://open.kakao.com/o/s0OcyAhb')"
-                        />
-                        <h4 
-                            class="text-center"
-                            @click="openNewTab('https://open.kakao.com/o/s0OcyAhb')">
-                            오픈 카톡
-                        </h4>
+                    <figure class="d-flex flex-column align-items-center hover" 
+                            @click="openNewTab('https://pf.kakao.com/_xjxnnxhn')">
+                        <img src="/imgs/contact/kakao.png"/>
+                        <h4 class="text-center">오픈 카톡</h4>
                     </figure>
                 </div>
                 <div class="contact-way">
@@ -23,16 +17,10 @@
             </div>
             <div class="contact-way-card d-flex flex-column align-items-center">
                 <div class="underline-box zoom-in">
-                    <figure class="d-flex flex-column align-items-center">
-                        <img
-                            src="/imgs/contact/instagram.png"
-                            @click="openNewTab('https://www.instagram.com/j2_fitness_official/')"
-                        />
-                        <h4 
-                            class="text-center"
-                            @click="openNewTab('https://www.instagram.com/j2_fitness_official/')">
-                            인스타그램
-                        </h4>
+                    <figure class="d-flex flex-column align-items-center hover"
+                            @click="openNewTab('https://www.instagram.com/j2fitness_gaegeum/')">
+                        <img src="/imgs/contact/instagram.png"/>
+                        <h4 class="text-center">인스타그램</h4>
                     </figure>
                 </div>
                 <div class="contact-way">
@@ -42,17 +30,10 @@
             </div>
             <div class="contact-way-card d-flex flex-column align-items-center">
                 <div class="underline-box zoom-in">
-                    <figure class="d-flex flex-column align-items-center">
-                        <img
-                            class="d-flex align-items-center"
-                            src="/imgs/contact/naver-talk.png" 
-                            @click="openNewTab('https://talk.naver.com/ct/wc2kmy?frm=mnmb&frm=nmb_detail')"
-                        />
-                        <h4 
-                            class="text-center"
-                            @click="openNewTab('https://talk.naver.com/ct/wc2kmy?frm=mnmb&frm=nmb_detail')">
-                            네이버 톡톡
-                        </h4>
+                    <figure class="d-flex flex-column align-items-center hover"
+                            @click="openNewTab('https://talk.naver.com/ct/wm1hb3i')">
+                        <img class="d-flex align-items-center" src="/imgs/contact/naver-talk.png" />
+                        <h4 class="text-center">네이버 톡톡</h4>
                     </figure>
                 </div>
                 <div class="contact-way">
@@ -76,6 +57,9 @@ export default class RegistrationInquiry extends Vue {
 </script>
 
 <style lang="css" scoped>
+figure.hover:hover {
+    cursor: pointer;
+}
 .contact-way-card {
     margin: 20px;
     width: 220px;

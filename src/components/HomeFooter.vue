@@ -4,8 +4,8 @@
             <div class="footer-underline-box">
                 <div class="footer-left">
                     <div class="footer-logo">
-                        <img src="/imgs/j2-logos/j2_main_logo_1.png" alt="J2 FITNESS" />
-                        <img src="/imgs/j2-logos/j2_main_logo_2.png" alt="J2 FITNESS" />
+                        <img src="/imgs/j2-logos/j2_main_logo_1.png" alt="J2 FITNESS"/>
+                        <img src="/imgs/j2-logos/j2_main_logo_2.png" alt="J2 FITNESS"/>
                     </div>
                     <div class="contents-small-circles d-flex">
                         <div
@@ -36,24 +36,16 @@
                         </div>
                         <div class="contact-small-circles d-flex pt-3">
                             <div class="small-circle d-flex justify-content-center">
-                                <i
-                                    class="fa-solid fa-phone"
-                                    ></i>
+                                <i class="fa-solid fa-phone" ></i>
                                     <!-- onClick={() => handleCopyClipBoard('051-891-8766')} -->
                             </div>
-                            <div class="small-circle d-flex justify-content-center">
-                                <img
-                                    class="kakao-black"
-                                    src="/imgs/contact/kakao-black.png"
-                                    @click="openNewTab('https://open.kakao.com/o/s0OcyAhb')"
-                                />
+                            <div class="small-circle d-flex justify-content-center" 
+                                 @click="openNewTab('https://pf.kakao.com/_xjxnnxhn')">
+                                <img class="kakao-black" src="/imgs/contact/kakao-black.png"/>
                             </div>
-                            <div class="small-circle  d-flex justify-content-center">
-                                <img
-                                    class="naver-talk-black"
-                                    src="/imgs/contact/naver-talk-black.png"
-                                    @click="openNewTab('https://talk.naver.com/ct/wc2kmy?frm=mnmb&frm=nmb_detail')"
-                                />
+                            <div class="small-circle  d-flex justify-content-center" 
+                                 @click="openNewTab('https://talk.naver.com/ct/wm1hb3i')">
+                                <img class="naver-talk-black" src="/imgs/contact/naver-talk-black.png"/>
                             </div>
                         </div>
                     </div>
