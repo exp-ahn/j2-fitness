@@ -3,23 +3,23 @@
         <div class="footer-wrap">
             <div class="footer-underline-box">
                 <div class="footer-left">
-                    <div class="footer-logo">
-                        <img src="/imgs/j2-logos/j2_main_logo_1.png" alt="J2 FITNESS"/>
-                        <img src="/imgs/j2-logos/j2_main_logo_2.png" alt="J2 FITNESS"/>
+                    <div class="footer-logo d-flex align-items-center mb-4">
+                        <img src="/imgs/j2-logos/j2_main_logo_1.png" 
+                             alt="J2 FITNESS"
+                             class="me-2"
+                             style="width: 50px;"
+                        />
+                        <img src="/imgs/j2-logos/j2_main_logo_2.png" 
+                             alt="J2 FITNESS"
+                             style="height: 50px;"/>
                     </div>
                     <div class="contents-small-circles d-flex">
                         <div
-                            class="small-circle d-flex justify-content-center"
+                            class="small-circle d-flex justify-content-center align-items-center pt-1 me-3"
                             @click="openNewTab('https://www.instagram.com/j2fitness_gaegeum/')"
                         >
-                            <i class="fa-brands fa-instagram"></i>
+                            <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
                         </div>
-                        <!-- <div
-                            class="small-circle"
-                            @click="openNewTab('https://www.youtube.com/watch?v=iIrF75Kk6uQ')"
-                        >
-                            <i class="fa-brands fa-youtube"></i>
-                        </div> -->
                         <div
                             class="small-circle d-flex justify-content-center"
                             @click="openNewTab('https://blog.naver.com/dmfmtm')"
@@ -28,23 +28,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-right">
+                <div style="width: 400px;">
                     <div class="d-flex mb-2">
-                        <div class="footer-info-wrap">
+                        <div class="pt-2 pe-5">
                             <p class="text-light fw-bold fs-6 mb-2">예약 / 상담 / 문의</p>
-                            <p class="text-light fw-bold fs-5 mb-3">Tel. 051-891-8766</p>
+                            <p class="text-light fw-bold fs-5 mb-3">Tel. 051-895-4983</p>
                         </div>
                         <div class="contact-small-circles d-flex pt-3">
-                            <div class="small-circle d-flex justify-content-center">
-                                <i class="fa-solid fa-phone" ></i>
-                                    <!-- onClick={() => handleCopyClipBoard('051-891-8766')} -->
+                            <div class="small-circle d-flex justify-content-center align-items-center pt-1 me-3"
+                                 @click="handleCopyClipBoard">
+                                <i class="bi bi-telephone-fill" style="font-size: 1.2rem;"></i>
                             </div>
-                            <div class="small-circle d-flex justify-content-center" 
+                            <div class="small-circle d-flex justify-content-center me-3" 
                                  @click="openNewTab('https://pf.kakao.com/_xjxnnxhn')">
                                 <img class="kakao-black" src="/imgs/contact/kakao-black.png"/>
                             </div>
                             <div class="small-circle  d-flex justify-content-center" 
-                                 @click="openNewTab('https://talk.naver.com/ct/wm1hb3i')">
+                                 @click="openNewTaeb('https://talk.naver.com/ct/wm1hb3i')">
                                 <img class="naver-talk-black" src="/imgs/contact/naver-talk-black.png"/>
                             </div>
                         </div>
@@ -74,6 +74,10 @@ export default class HomeFooter extends Vue {
     public openNewTab(address: string) {
         window.open(address);
     };
+
+    public handleCopyClipBoard() {
+        navigator.clipboard.writeText('051-895-4983').then(() => alert("전화번호가 복사되었습니다."));
+    }
 }
 </script>
 
@@ -87,20 +91,12 @@ footer {
     width: 40px;
     height: 40px;
 }
-
 .small-circle:hover {
     background-color: #dadada;
 }
-
-.small-circle > i {
-    line-height: 40px;
-    margin: 0 auto;
-}
-
-.small-circle > img {
+img {
     object-fit: contain;
 }
-
 .footer-naver-blog {
     width: 30px;
     height: 30px;
@@ -118,15 +114,6 @@ footer {
     height: 33px;
     margin: 3.5px auto;
 }
-.fa-phone {
-    font-size: 1.2em;
-}
-.fa-youtube {
-    font-size: 1.5em;
-}
-.fa-instagram {
-    font-size: 1.7em;
-}
 .footer-wrap {
     width: 1200px;
     margin: 0 auto;
@@ -139,34 +126,4 @@ footer {
     padding-bottom: 20px;
     margin-bottom: 15px;
 }
-.footer-logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.footer-logo > img:first-child {
-    width: 50px;
-    object-fit: contain;
-    margin-right: 10px;
-}
-.footer-logo > img:last-child {
-    height: 50px;
-    object-fit: contain;
-}
-.contents-small-circles > div,
-.contact-small-circles > div {
-    margin-right: 20px;
-}
-.footer-right {
-    width: 400px;
-}
-.available-time > p:last-child {
-    font-weight: bold;
-    font-size: 1.1em;
-}
-.footer-info-wrap {
-    padding-top: 5px;
-    padding-right: 25px;
-}
-
 </style>
