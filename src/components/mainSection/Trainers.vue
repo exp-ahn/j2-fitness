@@ -3,50 +3,56 @@
         <h3>트레이너</h3>
         <div class="j2-trainers">
             <div v-for="(item, index) in trainerInfos" :key="index">
-                <trainer-card-comp :trainerName="item.name" :imgAddress="item.imgAddress"/>
+                <trainer-card-comp 
+                    :trainerName="item.name" 
+                    :imgAddress="item.imgAddress" 
+                    @click="openModal(item)"
+                />
             </div>
         </div>
+        <trainer-detail-modal 
+            v-if="isModalVisible"
+            :detailInfo="detailInfo"
+            :isVisible="isModalVisible"
+            @close="isModalVisible = false"
+        />
     </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TrainerCardComp from './trainers/TrainerCardComp.vue';
+import TrainerDetailModal from './trainers/TrainerDetailModal.vue';
+import TrainerData from './trainers/TrainersInfo.json';
 
 interface TrainerInfo {
     name: string,
     imgAddress: string
-    // detail: any
+    detail: any
 }
 
 @Component({
     components: {
         TrainerCardComp,
+        TrainerDetailModal
     }
 })
 export default class Trainers extends Vue {
     private trainerInfos: Array<TrainerInfo> = [];
+    private detailInfo: any = {}
+    private isModalVisible: boolean = false;
 
-    mounted() {
-        this.initTrainerInfos()
-        console.log('trainers :: ', this.trainerInfos)
+    private mounted() {
+        this.initTrainerInfos();
     }
 
     private initTrainerInfos() {
-        this.trainerInfos = [
-            {
-                name: '김 성 주',
-                imgAddress: '/imgs/trainers/Kim/trainer-kim.jpeg',
-            },
-            {
-                name: '박 도 연',
-                imgAddress: '/imgs/trainers/Park/trainer-park.jpeg',
-            },
-            {
-                name: '백 인 호',
-                imgAddress: '/imgs/trainers/Beak/trainer-beak.jpeg',
-            },
-        ]
+        this.trainerInfos = TrainerData.trainers;
+    }
+
+    private openModal(trainer: TrainerInfo) {
+        this.detailInfo = trainer;
+        this.isModalVisible = true;
     }
 
 }

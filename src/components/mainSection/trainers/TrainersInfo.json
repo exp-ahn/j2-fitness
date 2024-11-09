@@ -1,0 +1,24 @@
+{
+    "trainers": [
+        {
+            "name": "김 성 주",
+            "imgAddress": "/imgs/trainers/Kim/trainer-kim.jpeg",
+            "detail": "TEMP\n추후 추가 예정입니다."
+        },
+        {
+            "name": "박 도 연",
+            "imgAddress": "/imgs/trainers/Park/trainer-park.jpeg",
+            "detail": "물리치료사 면허 취득\nKEMA professional\n(운동분석 기반 근골격계관리 솔루션 전문가)\nMFR Specialist\n(근막이완 전문가)\nOMPT introduction course\n(정형도수치료)\nbasic course\nintermediate course trainer\nPNF basic course\n(고유수용성 신경근촉진법)\npart A & B course\nFASCIAL MANIPULATION\n(근막도수치료)\nLEVEL 1A\nLEVEL 1B\nNPCA 부산 2021\n노비스 비키니 2위\n비키니 4위\nPCA 부산 2021\n비키니 5위"
+        },
+        {
+            "name": "백 인 호",
+            "imgAddress": "/imgs/trainers/Beak/trainer-beak.jpeg",
+            "detail": "2022 NPCA Novice Junior 1st\n2022 NPCA Novice Tall 1st\n2022 ICN Tall 3st\n2022 NPCA 창원 Tall 2st\n2022 NPCA 부산 Tall 5th\n2024 NPCA 김해 Tall 1st & 그랑프리\n2024 NPCA 부산 Tall 1st & 그랑프리\nNPCA KOREA PRO 획득"
+        },
+        {
+            "name": "정 선 희",
+            "imgAddress": "/imgs/test_img.png",
+            "detail": "NPCA 코리아 스포츠모델 프로\nK-classic 스포츠모델 프로\n24 K-classic 울산 스포츠모델 그랑프리\n23 NPCA 양산 스포츠모델 그랑프리\n23 NPCA 부산 스포츠모델 그랑프리\n스포츠영양학 코치\n간호사 트레이너"
+        }
+    ]
+}

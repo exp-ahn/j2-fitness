@@ -1,5 +1,5 @@
 <template>
-    <div class="trainers zoom-in">
+    <div class="trainers zoom-in" @click="$emit('click')">
         <figure>
             <img class="trainer-img" :src=imgAddress />
             <h4>{{ trainerName }}</h4>
@@ -26,6 +26,7 @@ export default class TrainerCardComp extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .trainer-img {
     width: 250px;
