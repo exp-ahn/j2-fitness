@@ -44,7 +44,7 @@
                                 <img class="kakao-black" src="/imgs/contact/kakao-black.png"/>
                             </div>
                             <div class="small-circle  d-flex justify-content-center" 
-                                 @click="openNewTaeb('https://talk.naver.com/ct/wm1hb3i')">
+                                 @click="openNewTab('https://talk.naver.com/ct/wm1hb3i')">
                                 <img class="naver-talk-black" src="/imgs/contact/naver-talk-black.png"/>
                             </div>
                         </div>
@@ -71,11 +71,11 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class HomeFooter extends Vue {
-    public openNewTab(address: string) {
+    private openNewTab(address: string) {
         window.open(address);
     };
 
-    public handleCopyClipBoard() {
+    private handleCopyClipBoard() {
         navigator.clipboard.writeText('051-895-4983').then(() => alert("전화번호가 복사되었습니다."));
     }
 }
