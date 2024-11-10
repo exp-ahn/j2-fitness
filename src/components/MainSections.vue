@@ -12,12 +12,8 @@
             <registration-inquiry id="inquiry" class="main_section"/>
             <location id="location" class="main_section"/>
             <trainers id="trainers" class="main_section"/>
-            <div id="interior" class="main_section">
-                <!-- <Interior /> -->
-            </div>
-            <div id="blog" class="main_section">
-                <!-- <Blog/> -->
-            </div>
+            <interior id="interior" class="main_section"/>
+            <blog id="blog" class="main_section"/>
         </div>
     </section>
 </template>
@@ -28,13 +24,17 @@ import CarouselImgs from './mainSection/CarouselImgs.vue';
 import RegistrationInquiry from './mainSection/RegistrationInquiry.vue';
 import Location from './mainSection/Location.vue';
 import Trainers from './mainSection/Trainers.vue';
+import Interior from './mainSection/Interior.vue';
+import Blog from './mainSection/Blog.vue';
 
 @Component({
     components: {
         CarouselImgs,
         RegistrationInquiry,
         Location,
-        Trainers
+        Trainers,
+        Interior,
+        Blog,
     }
 })
 export default class MainSections extends Vue {
