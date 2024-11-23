@@ -39,7 +39,7 @@ export default class NaverMap extends Vue {
 
       const script = document.createElement('script');
       script.id = 'naver-map-script';
-      script.src = process.env.VUE_APP_API_URL;
+      script.src = process.env.VUE_APP_API_URL as string; // 임시 캐스팅
       script.async = true;
       script.defer = true;
       script.onload = () => {
