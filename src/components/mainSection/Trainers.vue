@@ -6,6 +6,7 @@
                 <trainer-card-comp 
                     :trainerName="item.name" 
                     :imgAddress="item.imgAddress" 
+                    :posterImgAddress="item.posterImgAddress" 
                     @click="openModal(item)"
                 />
             </div>

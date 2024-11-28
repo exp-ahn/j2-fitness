@@ -8,9 +8,9 @@
                 </div>
                 <div class="modal-body detail-text text-start d-flex">
                     <div>
-                        <img :src="trainerImg" alt="trainer_img" style="max-width: 400px; max-height: 550px">
+                        <img :src="trainerImg" alt="trainer_img" style="max-width: 700px;">
                     </div>
-                    <dir>{{ detailInfo.detail }}</dir>
+                    <!-- <dir>{{ detailInfo.detail }}</dir> -->
                     
                 </div>
             </div>
@@ -28,7 +28,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 interface TrainerInfo {
     name: string,
-    imgAddress: string
+    imgAddress: string,
+    posterImgAddress: string,
     detail: any
 }
 
@@ -38,7 +39,7 @@ export default class TrainerDetailModal extends Vue {
     @Prop({default: false}) isVisible!: boolean;
 
     private get trainerImg() {
-        return this.detailInfo.imgAddress;
+        return this.detailInfo.posterImgAddress;
     }
 
     private closeModal() {

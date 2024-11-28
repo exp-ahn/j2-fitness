@@ -13,7 +13,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component({})
 export default class TrainerCardComp extends Vue {
     @Prop({default:'홍 길 동'}) trainerName!: string;
-    @Prop({default:'/imgs/trainers/default-img'}) imgAddress!: string;
+    @Prop({default:'/imgs/test_img.png'}) imgAddress!: string;
 }
 </script>
 

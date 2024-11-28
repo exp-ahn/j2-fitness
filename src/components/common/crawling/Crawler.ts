@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Cheerio, CheerioAPI, CheerioOptions, CheerioRequestOptions } from "cheerio";
+// import { Cheerio, CheerioAPI, CheerioOptions, CheerioRequestOptions } from "cheerio";
 
 export default class WebCrawler {
     public static async scrapeWithCheerio(): Promise<string[]> {
