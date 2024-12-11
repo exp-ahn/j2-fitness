@@ -17,10 +17,11 @@ export default class Manito extends Vue {
     private inputText:string = ''
 
     private getManito() {
+        const random = (Math.floor(Math.random()*1000))%6
         if (this.memberList.length === 6) {
             const inputStringIndex = this.memberList.indexOf(this.inputText);
             this.memberList.splice(inputStringIndex, 1)
-            alert(this.memberList);
+            alert(`선택된 마니또는 '${this.memberList[random]}' 입니다.`);
         } else {
             alert('이미 참여하셨습니다.');
         }
