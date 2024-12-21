@@ -22,7 +22,8 @@ export default class Blog extends Vue {
     }
 
     private async getSearchAPI() {
-        const url = '/.netlify/functions/naverSearchAPI'; // 배포버전
+        const url = '/api/naverSearchAPI'; // 개발버전
+        // const url = '/.netlify/functions/naverSearchAPI'; // 배포버전
         const query = 'J2 FITNESS';
         const encodedQuery = encodeURIComponent(query);
 
