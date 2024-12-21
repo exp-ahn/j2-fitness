@@ -22,14 +22,14 @@ export default class Blog extends Vue {
     }
 
     private async getSearchAPI() {
-        // const url = '/api/naverSearchAPI'; // 개발버전
         const url = '/.netlify/functions/naverSearchAPI'; // 배포버전
         const query = 'J2 FITNESS';
+        const encodedQuery = encodeURIComponent(query);
 
         try {
             const res = await axios.get(url, {
                 params: {
-                    query: query,
+                    query: encodedQuery,
                     display: 100,
                     start: 1,
                     sort: 'sim'
