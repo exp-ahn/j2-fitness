@@ -13,7 +13,7 @@
             <location id="location" class="main_section"/>
             <trainers id="trainers" class="main_section"/>
             <interior id="interior" class="main_section"/>
-            <blog id="blog" class="main_section"/>
+            <blog id="blog" style="padding-top: 50px;"/>
         </div>
     </section>
 </template>

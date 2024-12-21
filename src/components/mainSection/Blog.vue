@@ -2,19 +2,43 @@
     <section class="text-center">
         <h3>블로그</h3>
 
+        <button type="button" class="btn btn-primary" @click="() => getSearchAPI()">Primary</button>
+
     </section>
 </template>
 
 <script lang="ts">
+import axios from 'axios';
 import { Component, Vue } from 'vue-property-decorator';
-import WebCrawler from '../common/crawling/Crawler';
 
 @Component({
     components: {}
 })
 export default class Blog extends Vue {
-    public mounted() {
-        WebCrawler.scrapeWithCheerio();
+    private data!: any;
+
+    private created() {
+        // this.getSearchAPI();
+    }
+
+    private async getSearchAPI() {
+        // const url = '/api/naverSearchAPI'; // 개발버전
+        const url = '/.netlify/functions/naverSearchAPI'; // 배포버전
+        const query = 'J2 FITNESS';
+
+        try {
+            const res = await axios.get(url, {
+                params: {
+                    query: query,
+                    display: 100,
+                    start: 1,
+                    sort: 'sim'
+                }
+            });
+            console.log('res :: ', res.data);
+        } catch (error) {
+            console.error(error)
+        }
     }
 }
 </script>
