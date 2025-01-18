@@ -41,6 +41,19 @@
                     주저리 주저리네이버 톡톡 관련 설명 주저리 주저리네이버 톡톡 관련 설명 주저리 주저리
                 </div>
             </div>
+            <div class="contact-way-card d-flex flex-column align-items-center">
+                <div class="underline-box zoom-in">
+                    <figure class="d-flex flex-column align-items-center hover"
+                            @click="openNewTab('https://m.booking.naver.com/booking/6/bizes/1253810')">
+                        <img class="d-flex align-items-center" src="/imgs/contact/naver-talk.png" />
+                        <h4 class="text-center">네이버 예약</h4>
+                    </figure>
+                </div>
+                <div class="contact-way">
+                    네이버 예약 관련 설명 주저리 주저리 네이버 예약 관련 설명 주저리 주저리 네이버 예약 관련 설명 주저리 주저리 
+                    네이버 예약 관련 설명 주저리 주저리 네이버 예약 관련 설명 주저리 주저리 
+                </div>
+            </div>
         </div>
     </section>
 </template>

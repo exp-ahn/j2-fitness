@@ -25,12 +25,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import TrainerCardComp from './trainers/TrainerCardComp.vue';
 import TrainerDetailModal from './trainers/TrainerDetailModal.vue';
 import TrainerData from './trainers/TrainersInfo.json';
-
-interface TrainerInfo {
-    name: string,
-    imgAddress: string
-    detail: any
-}
+import { TrainerInfo } from '../common/Interfaces';
 
 @Component({
     components: {

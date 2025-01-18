@@ -4,10 +4,10 @@ module.exports = defineConfig({
   filenameHashing: true,
   devServer: {
     proxy: {
-      '/.netlify/functions': {
-        target: 'http://localhost:8888',
-        changeOrigin: true,
-        pathRewrite: { '^/.netlify/functions': '' }
+      '/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          pathRewrite: { '^/api': '' },
       },
     },
   },

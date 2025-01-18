@@ -37,8 +37,10 @@
   },
   "include": [
     "src/**/*.ts",
+    "src/**/*.js",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "netlify/functions/**/*",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
