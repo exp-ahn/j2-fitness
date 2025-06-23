@@ -21,12 +21,12 @@ export default class NaverMap extends Vue {
   private marker:any = null;
 
   private async mounted() {
-    try {
-      await this.loadNaverMapScript();
-      this.initializeMap();
-    } catch (error) {
-      console.error(error);
-    }
+    // try {
+    //   await this.loadNaverMapScript();
+    //   this.initializeMap();
+    // } catch (error) {
+    //   console.error(error);
+    // }
   }
 
   private loadNaverMapScript(): Promise<void> {
